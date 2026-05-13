@@ -387,7 +387,7 @@ with tab_tabel:
                 return "background-color: #FAEEDA; color: #633806; font-weight: 500"
             return ""
 
-        styled = df.style.applymap(kleur_ernst, subset=["Ernst"])
+        styled = df.style.map(kleur_ernst, subset=["Ernst"])
         st.dataframe(styled, use_container_width=True, hide_index=True)
 
         st.download_button(
