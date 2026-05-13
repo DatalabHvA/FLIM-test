@@ -68,7 +68,7 @@ WETTEN = [
         "omschrijving": "EU-bedrijven die koolstofintensieve producten zoals staal en aluminium importeren moeten CO₂-verklaringen aanleveren.",
         "risico": "Naheffingen bij verkeerde rapportage. Import zonder correcte CO₂-verklaring kan worden tegengehouden.",
         "ernst": "Hoog",
-        "link": "https://flim-tool.streamlit.app/~/+/x_CBAM",
+        "link": "https://flim-test.streamlit.app/x_CBAM",
     },
     {
         "naam": "ESPR",
@@ -82,7 +82,7 @@ WETTEN = [
         "omschrijving": "Stelt minimumvereisten aan levensduur, repareerbaarheid en gebruik van gerecyclede materialen voor producten op de EU-markt.",
         "risico": "Verkoopverbod zonder ecodesign-goedkeuring. Boetes bij schending. OEM's stellen leveranciers aansprakelijk.",
         "ernst": "Hoog",
-        "link": "https://flim-tool.streamlit.app/~/+/x_ESPR",
+        "link": "https://flim-test.streamlit.app/x_ESPR",
     },
     {
         "naam": "Right to Repair",
@@ -110,7 +110,7 @@ WETTEN = [
         "omschrijving": "Vrijwillige standaard voor MKB om duurzaamheidsdata gestructureerd te verzamelen en te delen met grote klanten.",
         "risico": "Niet leveren van emissiedata kan contractbreuk opleveren met grote klanten die CSRD-rapportageplichtig zijn.",
         "ernst": "Midden",
-        "link": "https://flim-tool.streamlit.app/~/+/x_VSME",
+        "link": "https://flim-test.streamlit.app/x_VSME",
     },
     {
         "naam": "CSRD",
@@ -124,7 +124,7 @@ WETTEN = [
         "omschrijving": "Grote bedrijven moeten rapporteren over CO₂-uitstoot, grondstoffengebruik en ketenimpact. MKB-leveranciers krijgen indirect te maken via klanteis.",
         "risico": "Leverancier zonder data valt af als ketenpartner. Contractbreuk mogelijk.",
         "ernst": "Hoog",
-        "link": "https://flim-tool.streamlit.app/~/+/x_VSME",
+        "link": "https://flim-test.streamlit.app/x_VSME",
     },
     {
         "naam": "EUDR",
@@ -138,7 +138,7 @@ WETTEN = [
         "omschrijving": "Bedrijven moeten aantonen dat hout niet afkomstig is van recent ontboste gebieden. Vraagt om ketentraceerbaarheid.",
         "risico": "Boetes tot 4% van omzet, inbeslagname goederen, exportstop. Blokkade grondstoffen bij risicoherkomst.",
         "ernst": "Hoog",
-        "link": "https://flim-tool.streamlit.app/~/+/x_EUDR",
+        "link": "https://flim-test.streamlit.app/x_EUDR",
     },
     {
         "naam": "CBAM — financiële verplichting",
@@ -152,7 +152,7 @@ WETTEN = [
         "omschrijving": "Financiële heffing op import van staal en aluminium zonder afdoende CO₂-prijs in het land van herkomst.",
         "risico": "Directe kostenstijging op import. Marginedruk zonder aanpassing van materiaalinkoop.",
         "ernst": "Hoog",
-        "link": "https://flim-tool.streamlit.app/~/+/x_CBAM",
+        "link": "https://flim-test.streamlit.appx_CBAM",
     },
     {
         "naam": "DPP — Digitaal Productpaspoort",
@@ -166,7 +166,7 @@ WETTEN = [
         "omschrijving": "Producenten leggen materiaalsamenstelling, onderhoudsinfo en recyclingmogelijkheden digitaal vast per product.",
         "risico": "Boetes bij onvolledige paspoorten. Producten zonder geldig DPP worden geweigerd door retailer of EU-grenscontrole.",
         "ernst": "Hoog",
-        "link": "https://flim-tool.streamlit.app/~/+/x_DPP",
+        "link": "https://flim-test.streamlit.app/x_DPP",
     },
     {
         "naam": "UPV Meubels",
@@ -180,7 +180,7 @@ WETTEN = [
         "omschrijving": "Producenten worden financieel verantwoordelijk voor inzameling, verwerking en recycling van meubels aan het einde van de levensduur.",
         "risico": "Boetes bij onderregistratie. Claims van retailers voor non-compliance in de productieketen.",
         "ernst": "Midden",
-        "link": "https://flim-tool.streamlit.app/~/+/x_UPV",
+        "link": "https://flim-test.streamlit.app/x_UPV",
     },
 ]
 
