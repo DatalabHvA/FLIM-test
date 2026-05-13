@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_plotly_events import plotly_events
+import streamlit.components.v1 as components
 import sys
 sys.path.append("..")
 from widgets import *
