@@ -1,2 +1,2 @@
-# FLIM-test
-test environment for FLIM tool
+# FLIM
+Impact model voor de Nederlandse meubelindustrie
