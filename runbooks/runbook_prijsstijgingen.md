@@ -129,7 +129,5 @@ De kolommen in `prijzen.xlsx` zijn genummerd met een ID (1, 2, 3, ... 43). Dieze
 
 - **Destatis URLs:** Genesis-tabellen kunnen periodiek hernummeren. Controleer altijd of `61231-XXXX` nog dezelfde inhoud heeft.
 - **Spaanplaat heeft twee FRED-bronnen:** `WPU0922` (gebruikt) en FAOSTAT (niet gebruikt). Niet vermengen.
-- **LDPE en PE delen ID 20** in `prijzen.xlsx` — controleer of dit bewust is.
 - **PlasticPortal data is niet altijd consistent** met FRED unlaminated sheet — beslis per update welke leidend is.
 - **Datakwaliteit (DQS-score):** in `Analyse_factoren.xlsx` sheet `FLIM DQS` staat het scoringsmodel. Update kwaliteitsscores bij significante wijziging van een bron.
-- **Hiaten:** geen FRED-data voor Fins vuren, Amerikaans noten, OSB, HPL, Buigtriplex — zie tab `Hiaten` in `Analyse_factoren.xlsx`. Tony zou hiernaar kijken.
