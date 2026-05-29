@@ -76,8 +76,8 @@
 
 ### Afgeleide dataset — `material_market_share.xlsx`
 
-- **Inhoud:** per materiaal de top-productielanden (ISO-code) met hun aandeel in de wereldhandel/productie (1636 rijen, kolommen: `ISO`, `market_share`, `material`).
-- **Hoe afgeleid:** [IN TE VULLEN — vermoedelijk via aggregatie van Comtrade export-data per HS-code over recente jaren. Documenteer de aggregatie-methode (gemiddeld over N jaar? Laatst beschikbare jaar?) en welk script dit produceert.]
+- **Inhoud:** per materiaal de landen welke aan NL exporteren (ISO-code) met hun aandeel in de handel (1636 rijen, kolommen: `ISO`, `market_share`, `material`).
+- **Hoe afgeleid:** script voor ophalen data is runbooks/scripts/UN_COMTRADE_API.ipynb
 
 ### Licentie & citatievereisten
 
