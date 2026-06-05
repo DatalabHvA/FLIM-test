@@ -150,6 +150,8 @@ def widget_branche():
         ss.branche_value = OPTIONS[0]
 
     def _sync():
+        if "branche_widget" not in ss:
+            return
         ss.branche_value = ss.branche_widget
         log_event("sidebar", "widget_branche", ss.branche_value)
 
@@ -168,6 +170,8 @@ def widget_medewerkers():
         ss.medewerkers_value = OPTIONS[0]
 
     def _sync():
+        if "medewerkers_widget" not in ss:
+            return
         ss.medewerkers_value = ss.medewerkers_widget
         log_event("sidebar", "widget_medewerkers", ss.medewerkers_value)
 
@@ -186,6 +190,8 @@ def widget_omzet():
         ss.omzet_value = OPTIONS[0]
 
     def _sync():
+        if "omzet_widget" not in ss:
+            return
         ss.omzet_value = ss.omzet_widget
         log_event("sidebar", "widget_omzet", ss.omzet_value)
 
@@ -204,6 +210,8 @@ def widget_klantsegment():
         ss.klantsegment_value = OPTIONS[0]
 
     def _sync():
+        if "klantsegment_widget" not in ss:
+            return
         ss.klantsegment_value = ss.klantsegment_widget
         log_event("sidebar", "widget_klantsegment", ss.klantsegment_value)
 

@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
 import sys
@@ -135,7 +136,35 @@ Opschaling van een circulaire productlijn naar industrieel formaat om hout-compo
     st.page_link("pages/06x_EFRO.py", label = "EFRO", icon="➡")
     st.page_link("pages/06x_EIC.py", label = "EIC Accelerator program", icon="➡")
 
+components.html("""
+<script>
+(function () {
+    var amounts = ["\u20ac20K \u2013 \u20ac2,5M", "\u20ac20K \u2013 \u20ac10M", "\u20ac2,5K \u2013 \u20ac17,5M", "\u20ac250K \u2013 \u20ac20M"];
+    var colors  = ["#E37222", "#E8A020", "#4A9A2C", "#1B5E20"];
 
+    function inject() {
+        var doc;
+        try { doc = window.parent.document; } catch (e) { return; }
+
+        var summaries = doc.querySelectorAll("[data-testid='stExpander'] details summary");
+        if (summaries.length < 4) { setTimeout(inject, 300); return; }
+
+        summaries.forEach(function (s, i) {
+            if (i >= amounts.length || s.querySelector(".fase-amount")) return;
+            s.style.display = "flex";
+            s.style.alignItems = "center";
+            var badge = doc.createElement("span");
+            badge.className = "fase-amount";
+            badge.textContent = amounts[i];
+            badge.style.cssText = "margin-left:auto;color:" + colors[i] + ";font-weight:600;font-size:0.9rem;white-space:nowrap;padding-right:12px;flex-shrink:0;";
+            s.appendChild(badge);
+        });
+    }
+
+    inject();
+})();
+</script>
+""", height=0)
 
 st.subheader("Hulp nodig?")
 st.write("""Het subsidielandschap kan complex aanvoelen en verandert regelmatig, dus kun je wel hulp gebruiken bij het vinden van passende regeling of bij het opstellen van de aanvraag? 
