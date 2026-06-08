@@ -320,14 +320,12 @@ else:
                 margin=dict(t=40, b=60, l=40, r=40),
             )
             st.plotly_chart(fig)
-            st.write('tekst')
-            
     
     
     with c2: 
         with st.container(border = True):
             st.subheader("2. Risico's (in de markt)")
-            st.write('Afwachten kost marktaandeel. Een groeiend deel van de markt wil duurzame alternatieven. Bedrijven zonder duurzaam aanbod riskeren structureel klantverlies.)
+            st.write('Afwachten kost marktaandeel. Een groeiend deel van de markt wil duurzame alternatieven. Bedrijven zonder duurzaam aanbod riskeren structureel klantverlies.')
 
             if ss.klanttype_value == 'B2C':
                 pie = go.Pie(labels=['Duurzame meubels', 'Traditionele meubels'], 
@@ -345,6 +343,8 @@ else:
                 margin=dict(t=40, b=40, l=40, r=40),
             )
             st.plotly_chart(fig)
+            st.write('Trendrisico: deze voorspelling is op basis van de huidige randvoorwaarden, dit aandeel kan sneller verschuiven naarmate eisen verder aanscherpen')
+            
 
     with st.container(border = True):
 
