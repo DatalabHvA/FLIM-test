@@ -303,7 +303,7 @@ if ss.klanttype_value == 'Overheid':
 
 else:
     st.title("Klantvraag — B2C & B2B")
-            st.write('Trendrisico: deze voorspelling is op basis van de huidige randvoorwaarden, dit aandeel kan sneller verschuiven naarmate eisen verder aanscherpen')
+    st.write('Trendrisico: deze voorspelling is op basis van de huidige randvoorwaarden, dit aandeel kan sneller verschuiven naarmate eisen verder aanscherpen')
             
     c1, c2 = st.columns(2)
 
