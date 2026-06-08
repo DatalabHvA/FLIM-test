@@ -345,7 +345,7 @@ else:
             )
             st.plotly_chart(fig)
   
-    st.write('Risico: dit aandeel verschuift snel naarmate eisen aanscherpen')
+    st.write('*Risico: dit aandeel zal sneller verschuiven naarmate de eisen verder aanscherpen*')
                       
     with st.container(border = True):
 
