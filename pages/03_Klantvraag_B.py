@@ -452,7 +452,7 @@ else:
 
                 # Layout
                 fig.update_layout(
-                    title="Voorkeur voor duurzame meubels bij aankoop vs. aandeel in verkoop",
+                    title="Voorkeur voor duurzame meubels vs. aandeel in verkoop",
                     xaxis_title="Percentage (%)",
                     yaxis_title="",
                     barmode="overlay",
