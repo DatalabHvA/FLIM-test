@@ -304,6 +304,8 @@ if ss.klanttype_value == 'Overheid':
 else:
     st.title("Klantvraag — B2C & B2B")
     c1, c2 = st.columns(2)
+            st.write('Onderstaande onderzoeken zijn gebaseerd op de huidige staat en ontwikkelingen, aandeel en groei kunnen sneller verschuiven naarmate eisen verder aanscherpen')
+            
 
     with c1:
         with st.container(border = True):
@@ -343,8 +345,6 @@ else:
                 margin=dict(t=40, b=40, l=40, r=40),
             )
             st.plotly_chart(fig)
-
-            st.write('Trendrisico: deze voorspelling is op basis van de huidige randvoorwaarden, dit aandeel kan sneller verschuiven naarmate eisen verder aanscherpen')
             
     with st.container(border = True):
 
