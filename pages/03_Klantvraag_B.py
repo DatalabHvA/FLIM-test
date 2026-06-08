@@ -308,7 +308,7 @@ else:
     with c1:
         with st.container(border = True):
             st.subheader('1. Kansen (in de markt)')
-            st.write('De groei van de duurzame meubelmarkt is meer dan dubbel zo groot als de traditionele productcategorieën. Dit biedt kansen om nieuw marktaandeel te claimen.')
+            st.write('Afwachten kost marktaandeel. Een groeiend deel van de markt wil duurzame alternatieven. Bedrijven zonder duurzaam aanbod riskeren structureel klantverlies.')
             
             if ss.klanttype_value == 'B2C':
                 fig = make_klantvraag_scatter_b2c(ss.klantvraag_df_b2c)
@@ -319,7 +319,10 @@ else:
                 legend=dict(orientation="h", x=0.5, xanchor="center", y=-0.35),
                 margin=dict(t=40, b=60, l=40, r=40),
             )
-            st.plotly_chart(fig)    
+            st.plotly_chart(fig)
+            st.write('tekst')
+            
+    
     
     with c2: 
         with st.container(border = True):
