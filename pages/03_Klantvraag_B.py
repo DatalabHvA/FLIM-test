@@ -481,7 +481,7 @@ else:
         if ss.klanttype_value == 'B2C':
             with st.expander('**3.3 Voorkeur voor lokale productie**'):
 
-                st.write('1 op de 3 consumenten wil lokaal geproduceerde meubels. Vooral hoge en middeninkomens lopen hierin voorop, precies de doelgroep voor premiumproducten en grotere aankopen.')
+                st.write('Ruim 1/3e van de consumenten wil lokaal geproduceerde meubels. Vooral hoge en middeninkomens lopen hierin voorop, precies de doelgroep voor premiumproducten en grotere investeringen.')
 
                 data = [
                     ("Tot 80.000 euro", 25, "#4285F4"),        # blauw
