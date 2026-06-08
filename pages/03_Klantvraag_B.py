@@ -308,7 +308,8 @@ else:
     with c1:
         with st.container(border = True):
             st.subheader('1. Kansen (in de markt)')
-            st.write('Afwachten kost marktaandeel. Een groeiend deel van de markt wil duurzame alternatieven. Bedrijven zonder duurzaam aanbod riskeren structureel klantverlies.')
+            st.write('Duurzame vraag groeit 2× sneller.
+De duurzame productcategorie groeit structureel harder dan het traditionele assortiment. Wie nu instapt, pakt een groeiend segment.')
             
             if ss.klanttype_value == 'B2C':
                 fig = make_klantvraag_scatter_b2c(ss.klantvraag_df_b2c)
@@ -327,7 +328,7 @@ else:
     with c2: 
         with st.container(border = True):
             st.subheader("2. Risico's (in de markt)")
-            st.write('Een groeiend deel van de markt verwacht duurzame alternatieven. Gebrek aan actie op dit gebied vormt een risico tot verlies van marktaandeel en afname van klanttevredenheid.')
+            st.write('Afwachten kost marktaandeel. Een groeiend deel van de markt wil duurzame alternatieven. Bedrijven zonder duurzaam aanbod riskeren structureel klantverlies.)
 
             if ss.klanttype_value == 'B2C':
                 pie = go.Pie(labels=['Duurzame meubels', 'Traditionele meubels'], 
