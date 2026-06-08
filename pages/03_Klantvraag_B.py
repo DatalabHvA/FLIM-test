@@ -303,7 +303,6 @@ if ss.klanttype_value == 'Overheid':
 
 else:
     st.title("Klantvraag — B2C & B2B")
-    st.write('Trendrisico: deze voorspelling is op basis van de huidige randvoorwaarden, dit aandeel kan sneller verschuiven naarmate eisen verder aanscherpen')
             
     c1, c2 = st.columns(2)
 
@@ -345,7 +344,9 @@ else:
                 margin=dict(t=40, b=40, l=40, r=40),
             )
             st.plotly_chart(fig)
-            
+  
+    st.write('Risico: dit aandeel verschuift snel naarmate eisen aanscherpen')
+                      
     with st.container(border = True):
 
         with st.expander('**3.1 Klantkeuze voor duurzaam**'):
