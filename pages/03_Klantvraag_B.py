@@ -539,12 +539,12 @@ else:
             st.write('Toont bereidheid van klanten om een meerprijs te betalen voor duurzaamheid. Meer dan de helft is bereid 10-20% extra te betalen. Dit opent mogelijkheden voor premium positionering.(uit enquête Duitse markt)')
 
             # Data
-            if ss.klanttype_value == 'B2B':
+            if ss.klanttype_value == 'B2C':
                 categories = ["Niet bereid", "5% toeslag", "10% toeslag", ">10% toeslag"]
                 values = [19.0, 25.0, 24.0, 32.0]
                 colors = ["#E38178", "#FBBC05", "#0FAD4E", "#2E7D3E"]
                 title_text = "Bereidheid consument om meer te betalen<br>voor duurzaamheid"
-            elif ss.klanttype_value == 'B2C':
+            elif ss.klanttype_value == 'B2B':
                 categories = ['Bereid om veel meer te betalen','Bereid om enigszins meer te betalen','Bereid om een klein beetje meer te betalen','Weet het niet','Niet bereid om meer te betalen']
                 values = [5.50, 38.80, 12.70, 35.40, 7.60]
                 colors = ["#E38178", "#FBBC05", "#9EB8A9",  "#0FAD4E", "#2E7D3E"]
