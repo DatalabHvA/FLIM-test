@@ -358,8 +358,7 @@ else:
                 colors = ["#05853A", "#2BC417", '#F1C40F', '#E74C3C']  # red, orange, yellow, green
                 title_text = "Relevantie van duurzame inkoop en verantwoorde ketens"
             else:
-                st.write('Belang van duurzaamheid bij meubels - Consumetenperspectief
-                Op de vraag "Hoe belangrijk is duurzaamheid voor jou bij het kiezen van meubels?" reageert de meerderheid positief. Slechts 16% acht het onbelangrijk.')
+                st.write('Belang van duurzaamheid bij meubels - Consumetenperspectief. Op de vraag "Hoe belangrijk is duurzaamheid voor jou bij het kiezen van meubels?" reageert de meerderheid positief. Slechts 16% acht het onbelangrijk.')
                 categories = ['Heel erg belangrijk', 'Belangrijk', 'Neutraal', 'Niet belangrijk']
                 values = [8, 42, 34, 16]
                 colors = ["#05853A", "#2BC417", '#F1C40F', '#E74C3C']  # red, orange, yellow, green
