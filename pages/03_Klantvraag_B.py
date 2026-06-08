@@ -410,7 +410,7 @@ else:
                             
         if ss.klanttype_value == 'B2C':
             with st.expander('**3.2 Klantwens vs afzet**'):
-                st.write('Klanten willen duurzamer, maar het vertaalt zich niet in verkoopcijfers — het huidige aanbod sluit onvoldoende aan. Ruim 40–50% van de duurzame vraag blijft onvervuld.')
+                st.write('Klanten willen duurzamer, maar het vertaalt zich nog niet in verkoopcijfers. Ruim 40–50% van de duurzame vraag blijft onvervuld. Sluit het huidige aanbod voldoende aan?')
                 
                 # Gegevens
                 # Data
@@ -468,7 +468,7 @@ else:
                 )
                 st.plotly_chart(fig)
 
-                st.markdown('*(Bron: [Milieu Centraal, D&B (iov Rijkswaterstaat), 2023](https://www.milieucentraal.nl/media/b01enjyy/factsheet-consumenteninzichten-zitmeubilair.pdf))*')
+                st.markdown('*(Bron: [Milieu Centraal, Rijkswaterstaat, 2023](https://www.milieucentraal.nl/media/b01enjyy/factsheet-consumenteninzichten-zitmeubilair.pdf))*')
         else:
             with st.expander('**3.2 Klantwens vs afzet**'):
                 p1, p2 = st.columns(2)
@@ -481,7 +481,7 @@ else:
         if ss.klanttype_value == 'B2C':
             with st.expander('**3.3 Voorkeur voor lokale productie**'):
 
-                st.write('1 op de 3 Nederlandse consumenten vindt het (heel erg) belangrijk dat meubels geproduceerd worden in het land waar zij zelf wonen. Hierin lopen de hoge inkomens voorop.')
+                st.write('1 op de 3 consumenten wil lokaal geproduceerde meubels. Vooral hoge en middeninkomens lopen hierin voorop, precies de doelgroep voor premiumproducten en grotere aankopen.')
 
                 data = [
                     ("Tot 80.000 euro", 25, "#4285F4"),        # blauw
