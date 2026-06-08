@@ -316,7 +316,7 @@ else:
             elif ss.klanttype_value == 'B2B':
                 fig = make_klantvraag_scatter_b2b(ss.klantvraag_df_b2b)        
             fig.update_layout(
-                title='Verglijking marktgroei: normale vs duurzame markt',
+                title='Vergelijking marktgroei: normale vs duurzame markt',
                 legend=dict(orientation="h", x=0.5, xanchor="center", y=-0.35),
                 margin=dict(t=40, b=60, l=40, r=40),
             )
