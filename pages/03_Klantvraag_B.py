@@ -410,7 +410,7 @@ else:
                             
         if ss.klanttype_value == 'B2C':
             with st.expander('**3.2 Klantwens vs afzet**'):
-                st.write('Deze vergelijking tussen wat klanten willen (hoge voorkeur voor duurzame producten) en wat daadwerkelijk wordt verkocht toont een mismatch. Klanten willen duurzamer, maar het vertaalt zich niet in verkoopcijfers. Komt dit omdat het huidige aanbod hier nog niet voldoende aansluit of gemakkelijk genoeg beschikbaar is? Wat met zekerheid gezegd kan worden: Tussen de 40-50% van de duurzame vraag naar meubels blijft momenteel onvervuld.')
+                st.write('Klanten willen duurzamer, maar het vertaalt zich niet in verkoopcijfers — het huidige aanbod sluit onvoldoende aan. Ruim 40–50% van de duurzame vraag blijft onvervuld.')
                 
                 # Gegevens
                 # Data
@@ -452,7 +452,7 @@ else:
 
                 # Layout
                 fig.update_layout(
-                    title="Trechter: van intentie naar realiteit bij duurzame meubelaankopen",
+                    title="Voorkeur voor duurzame meubels bij aankoop vs. aandeel in verkoop",
                     xaxis_title="Percentage (%)",
                     yaxis_title="",
                     barmode="overlay",
