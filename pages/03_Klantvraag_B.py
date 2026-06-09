@@ -303,28 +303,30 @@ if ss.klanttype_value == 'Overheid':
 
 else:
     st.title("Klantvraag — B2C & B2B")
+            
     c1, c2 = st.columns(2)
 
     with c1:
         with st.container(border = True):
             st.subheader('1. Kansen (in de markt)')
-            st.write('De groei van de duurzame meubelmarkt is meer dan dubbel zo groot als de traditionele productcategorieën. Dit biedt kansen om nieuw marktaandeel te claimen.')
+            st.write('Duurzame vraag groeit 2× sneller. De duurzame productcategorie groeit structureel harder dan het traditionele assortiment. Wie nu instapt, pakt een groeiend segment.')
             
             if ss.klanttype_value == 'B2C':
                 fig = make_klantvraag_scatter_b2c(ss.klantvraag_df_b2c)
             elif ss.klanttype_value == 'B2B':
                 fig = make_klantvraag_scatter_b2b(ss.klantvraag_df_b2b)        
             fig.update_layout(
-                title='Verglijking marktgroei: normale vs duurzame markt',
+                title='Vergelijking marktgroei: normale vs duurzame markt',
                 legend=dict(orientation="h", x=0.5, xanchor="center", y=-0.35),
                 margin=dict(t=40, b=60, l=40, r=40),
             )
-            st.plotly_chart(fig)    
+            st.plotly_chart(fig)
+    
     
     with c2: 
         with st.container(border = True):
             st.subheader("2. Risico's (in de markt)")
-            st.write('Een groeiend deel van de markt verwacht duurzame alternatieven. Gebrek aan actie op dit gebied vormt een risico tot verlies van marktaandeel en afname van klanttevredenheid.')
+            st.write('Afwachten kost marktaandeel. Een groeiend deel van de markt wil duurzame alternatieven. Bedrijven zonder duurzaam aanbod riskeren structureel klantverlies.')
 
             if ss.klanttype_value == 'B2C':
                 pie = go.Pie(labels=['Duurzame meubels', 'Traditionele meubels'], 
@@ -342,7 +344,9 @@ else:
                 margin=dict(t=40, b=40, l=40, r=40),
             )
             st.plotly_chart(fig)
-
+  
+    st.write('*Risico: deze aandelen zullen sneller verschuiven naarmate de eisen verder aanscherpen*')
+                      
     with st.container(border = True):
 
         with st.expander('**3.1 Klantkeuze voor duurzaam**'):
@@ -354,7 +358,7 @@ else:
                 colors = ["#05853A", "#2BC417", '#F1C40F', '#E74C3C']  # red, orange, yellow, green
                 title_text = "Relevantie van duurzame inkoop en verantwoorde ketens"
             else:
-                st.write('Op de vraag “Hoe belangrijk is duurzaamheid voor jou bij het kiezen van meubels?” antwoordt 50% van de gevraagde consumenten dat dit belangrijk gevonden wordt. Daarbij vindt slechts 16% van de consumenten duurzaamheid onbelangrijk')
+                st.write('Op de vraag "Hoe belangrijk is duurzaamheid voor jou bij het kiezen van meubels?" reageert de meerderheid positief. Slechts 16% acht het onbelangrijk.')
                 categories = ['Heel erg belangrijk', 'Belangrijk', 'Neutraal', 'Niet belangrijk']
                 values = [8, 42, 34, 16]
                 colors = ["#05853A", "#2BC417", '#F1C40F', '#E74C3C']  # red, orange, yellow, green
@@ -406,7 +410,7 @@ else:
                             
         if ss.klanttype_value == 'B2C':
             with st.expander('**3.2 Klantwens vs afzet**'):
-                st.write('Deze vergelijking tussen wat klanten willen (hoge voorkeur voor duurzame producten) en wat daadwerkelijk wordt verkocht toont een mismatch. Klanten willen duurzamer, maar het vertaalt zich niet in verkoopcijfers. Komt dit omdat het huidige aanbod hier nog niet voldoende aansluit of gemakkelijk genoeg beschikbaar is? Wat met zekerheid gezegd kan worden: Tussen de 40-50% van de duurzame vraag naar meubels blijft momenteel onvervuld.')
+                st.write('Klanten willen duurzamer, maar het vertaalt zich nog niet in verkoopcijfers. Ruim 40–50% van de duurzame vraag blijft onvervuld. Sluit het huidige aanbod voldoende aan?')
                 
                 # Gegevens
                 # Data
@@ -448,7 +452,7 @@ else:
 
                 # Layout
                 fig.update_layout(
-                    title="Trechter: van intentie naar realiteit bij duurzame meubelaankopen",
+                    title="Voorkeur voor duurzame meubels vs. aandeel in verkoop",
                     xaxis_title="Percentage (%)",
                     yaxis_title="",
                     barmode="overlay",
@@ -464,7 +468,7 @@ else:
                 )
                 st.plotly_chart(fig)
 
-                st.markdown('*(Bron: [Milieu Centraal, D&B (iov Rijkswaterstaat), 2023](https://www.milieucentraal.nl/media/b01enjyy/factsheet-consumenteninzichten-zitmeubilair.pdf))*')
+                st.markdown('*(Bron: [Milieu Centraal, Rijkswaterstaat, 2023](https://www.milieucentraal.nl/media/b01enjyy/factsheet-consumenteninzichten-zitmeubilair.pdf))*')
         else:
             with st.expander('**3.2 Klantwens vs afzet**'):
                 p1, p2 = st.columns(2)
@@ -477,7 +481,7 @@ else:
         if ss.klanttype_value == 'B2C':
             with st.expander('**3.3 Voorkeur voor lokale productie**'):
 
-                st.write('1 op de 3 Nederlandse consumenten vindt het (heel erg) belangrijk dat meubels geproduceerd worden in het land waar zij zelf wonen. Hierin lopen de hoge inkomens voorop.')
+                st.write('Ruim 1/3e van de consumenten wil lokaal geproduceerde meubels. Vooral hoge en middeninkomens lopen hierin voorop, precies de doelgroep voor premiumproducten en grotere investeringen.')
 
                 data = [
                     ("Tot 80.000 euro", 25, "#4285F4"),        # blauw
@@ -532,15 +536,15 @@ else:
                 
     with st.container(border = True):
         with st.expander('**4. Prijsperceptie en -acceptatie**'):
-            st.write('Toont bereidheid van klanten om een meerprijs te betalen voor duurzaamheid. Meer dan de helft is bereid 10-20% extra te betalen. Dit opent mogelijkheden voor premium positionering.(uit enquête Duitse markt)')
+            st.write('Meer dan de helft van de consumenten is bereid 10–20% meer te betalen. Dit biedt concrete ruimte voor premiumpositionering en hogere marges, mits duurzaamheid aantoonbaar is.')
 
             # Data
-            if ss.klanttype_value == 'B2B':
+            if ss.klanttype_value == 'B2C':
                 categories = ["Niet bereid", "5% toeslag", "10% toeslag", ">10% toeslag"]
                 values = [19.0, 25.0, 24.0, 32.0]
                 colors = ["#E38178", "#FBBC05", "#0FAD4E", "#2E7D3E"]
                 title_text = "Bereidheid consument om meer te betalen<br>voor duurzaamheid"
-            elif ss.klanttype_value == 'B2C':
+            elif ss.klanttype_value == 'B2B':
                 categories = ['Bereid om veel meer te betalen','Bereid om enigszins meer te betalen','Bereid om een klein beetje meer te betalen','Weet het niet','Niet bereid om meer te betalen']
                 values = [5.50, 38.80, 12.70, 35.40, 7.60]
                 colors = ["#E38178", "#FBBC05", "#9EB8A9",  "#0FAD4E", "#2E7D3E"]
@@ -582,7 +586,7 @@ else:
 
             st.plotly_chart(fig)
 
-            st.markdown('*(Bron: [PwC, 2024](https://www.pwc.com/gx/en/issues/c-suite-insights/voice-of-the-consumer-survey/2024.html))*')
+            st.markdown('*(Enquête Duitse markt, bron: [PwC, 2024](https://www.pwc.com/gx/en/issues/c-suite-insights/voice-of-the-consumer-survey/2024.html))*')
             
     with st.container(border = True):
         st.subheader('5. Voorbeelden uit de praktijk')
