@@ -159,7 +159,7 @@ if ss.klanttype_value == 'Overheid':
     with cols[1]: 
         st.plotly_chart(fig2)
 
-    st.write("De tweejaarlijkse onderzoeken van het RIVM op gebied van toepassing van MVOI-criteria binnen inkoop- en aanbestedingstrajecten toont dat meer dan een >75% aandeel van alle trajecten hier actief op selecteert. Hiervan bevat meer dan de helft eisen op gebied van toekomstbestendige keuzes op gebied van grondstoffen, ontwerp en ketenverantwoordelijkheid.")
+    st.write("Meer dan 75% van aanbestedingstrajecten past actief MVOI-criteria toe. Meer dan de helft richt zich op grondstoffen, ontwerp en ketenverantwoordelijkheid. (RIVM, 2023)")
 
     st.markdown("### Ambitieniveau bij uitvraag MVOI")
 
