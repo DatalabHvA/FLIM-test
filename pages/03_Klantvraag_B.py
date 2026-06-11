@@ -153,6 +153,8 @@ if ss.klanttype_value == 'Overheid':
         )
     )
 
+    st.write("Meer dan 75% van aanbestedingstrajecten past actief MVOI-criteria toe. Meer dan de helft richt zich op grondstoffen, ontwerp en ketenverantwoordelijkheid. (RIVM, 2023)")
+
     cols = st.columns(2)
     with cols[0]:
         st.plotly_chart(fig)
