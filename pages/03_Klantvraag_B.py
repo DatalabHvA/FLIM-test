@@ -161,8 +161,6 @@ if ss.klanttype_value == 'Overheid':
     with cols[1]: 
         st.plotly_chart(fig2)
 
-    st.write("Meer dan 75% van aanbestedingstrajecten past actief MVOI-criteria toe. Meer dan de helft richt zich op grondstoffen, ontwerp en ketenverantwoordelijkheid. (RIVM, 2023)")
-
     st.markdown("### Ambitieniveau bij uitvraag MVOI")
 
     df_mvi_ambitie = pd.DataFrame({
