@@ -36,6 +36,7 @@ with st.sidebar:
     st.page_link("Home.py", label="⬅ Terug naar Home")
 
     st.header("Filters")
+    widget_medewerkers()
     widget_omzet()
     widget_klantsegment()
     widget_materialen()
@@ -117,7 +118,7 @@ WETTEN = [
         "jaar": "2025",
         "jaar_sort": 2025,
         "sub": "Grote bedrijven verplicht rapporteren",
-        "doelgroepen": ["mkb"],
+        "doelgroepen": ["grootbedrijf"],
         "kleur": "#378ADD",
         "kleur_licht": "#E6F1FB",
         "kleur_tekst": "#0C447C",
@@ -185,10 +186,11 @@ WETTEN = [
 ]
 
 DOELGROEP_LABELS = {
-    "producent":   ("🏭", "Producent / fabrikant"),
-    "importeur":   ("🚚", "Importeur / leverancier"),
-    "distributeur":("🏪", "Distributeur / verkoper"),
-    "mkb":         ("🏢", "Grote bedrijven / MKB"),
+    "producent":    ("🏭", "Producent / fabrikant"),
+    "importeur":    ("🚚", "Importeur / leverancier"),
+    "distributeur": ("🏪", "Distributeur / verkoper"),
+    "mkb":          ("🏢", "MKB"),
+    "grootbedrijf": ("🏢", "Groot bedrijf (250+ fte)"),
 }
 
 ERNST_KLEUREN = {
@@ -211,6 +213,7 @@ div[data-testid="metric-container"] { background: white; border: 0.5px solid #e2
 # ── Header ───────────────────────────────────────────────────────────────────
 st.title("📋 Wetgeving tijdlijn — meubel & interieur")
 st.caption("FLIM-tool · Factor 4: Wet- en regelgeving · Gefilterd op doelgroep en periode")
+st.write("De Europese Unie zet met nieuwe wetgeving stevig in op een zuiniger en slimmer gebruik van grondstoffen. Hierdoor is het bewust omgaan met grondstoffen niet langer vrijblijvend, maar wordt het een wettelijke verplichting.\n\nSelecteer onderstaand onder welke groep(en) van ketenpartijen jouw bedrijf valt.")
 
 st.divider()
 
@@ -219,18 +222,18 @@ col_f1, col_f2, col_f3 = st.columns([2, 2, 1])
 
 with col_f1:
     doelgroep_opties = {
-        "Alles": "all",
         "🏭 Producent / fabrikant": "producent",
         "🚚 Importeur / leverancier": "importeur",
         "🏪 Distributeur / verkoper": "distributeur",
-        "🏢 Grote bedrijven / MKB": "mkb",
     }
-    gekozen_label = st.selectbox(
+    gekozen_labels = st.multiselect(
         "Doelgroep",
         options=list(doelgroep_opties.keys()),
-        index=0,
+        default=[],
+        placeholder="Alle doelgroepen",
     )
-    gekozen_doelgroep = doelgroep_opties[gekozen_label]
+    gekozen_doelgroepen = [doelgroep_opties[label] for label in gekozen_labels]
+    doelgroep_label = ", ".join(gekozen_labels) if gekozen_labels else "Alle doelgroepen"
 
 with col_f2:
     ernst_filter = st.multiselect(
@@ -241,17 +244,27 @@ with col_f2:
 
 with col_f3:
     jaar_max = st.selectbox(
-        "Tot en met",
+        "Van toepassing in",
         options=["2024", "2025", "2026", "2027", "2030"],
         index=4,
     )
 
 # ── Filter toepassen ──────────────────────────────────────────────────────────
+is_groot = ss.medewerkers_value == "250+ fte"
+
+def doelgroep_match(w):
+    # Profiel-gebaseerde wetten (mkb/grootbedrijf) omzeilen de multiselect altijd
+    if "grootbedrijf" in w["doelgroepen"] or "mkb" in w["doelgroepen"]:
+        return True
+    return not gekozen_doelgroepen or any(dg in w["doelgroepen"] for dg in gekozen_doelgroepen)
+
 gefilterd = [
     w for w in WETTEN
-    if (gekozen_doelgroep == "all" or gekozen_doelgroep in w["doelgroepen"])
+    if doelgroep_match(w)
     and w["ernst"] in ernst_filter
     and w["jaar_sort"] <= int(jaar_max)
+    and ("grootbedrijf" not in w["doelgroepen"] or is_groot)
+    and ("mkb" not in w["doelgroepen"] or not is_groot)
 ]
 
 # ── Metrics ───────────────────────────────────────────────────────────────────
@@ -264,10 +277,10 @@ m4.metric("Laatste deadline", gefilterd[-1]["jaar"] if gefilterd else "—")
 st.divider()
 
 # ── Tabbladen ─────────────────────────────────────────────────────────────────
-tab_tijdlijn, tab_tabel, tab_risico = st.tabs([
+tab_tijdlijn, tab_risico, tab_tabel = st.tabs([
     "📅 Tijdlijn",
-    "📊 Tabeloverzicht",
     "⚠️ Risicomatrix",
+    "📊 Tabeloverzicht",
 ])
 
 # ────────────────────────────────────────────────────────────────────────────────
@@ -345,7 +358,7 @@ with tab_tijdlijn:
                 </span>
                 <div style="width:3px;"></div>
                 <span style="font-size:11px;font-weight:500;color:#888;">
-                    {len(gefilterd)} regeling(en) — {gekozen_label}
+                    {len(gefilterd)} regeling(en) — {doelgroep_label}
                 </span>
             </div>
             {rijen_html}

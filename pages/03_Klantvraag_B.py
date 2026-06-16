@@ -47,35 +47,75 @@ if ss.klanttype_value == 'Overheid':
     st.title("Klantvraag — Overheid")
 
     st.markdown("""
-  
-    In 2021 spendeerde de Rijksoverheid ruim **85 miljard euro** aan ingekochte diensten, producten en werken.  
-    In 2023 was de inkoop van *Werkplekomgeving (Rijksoverheid)* jaarlijks goed voor zo'n **60 miljoen euro**.  
-    
+    <div style="display:flex; gap:16px; margin-bottom:24px;">
+        <div style="flex:1; border:2px solid #4472C4; border-radius:12px; padding:20px 24px;">
+            <div style="font-size:2.4rem; font-weight:700; color:#4472C4; line-height:1.1;">€60 mln</div>
+            <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">jaarlijkse inkoop Werkplekomgeving Rijksoverheid</div>
+            <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(jaarbasis, ref. 2022)</div>
+        </div>
+        <div style="flex:1; border:2px solid #E8A020; border-radius:12px; padding:20px 24px;">
+            <div style="font-size:2.4rem; font-weight:700; color:#E8A020; line-height:1.1;">€85 mrd</div>
+            <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">inkoop diensten en producten Rijksoverheid</div>
+            <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(jaarbasis, ref. 2021)</div>
+        </div>
+        <div style="flex:1; border:2px solid #E37222; border-radius:12px; padding:20px 24px;">
+            <div style="font-size:2.4rem; font-weight:700; color:#E37222; line-height:1.1;">50%</div>
+            <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">minder inkoop van primaire grondstoffen in 2030</div>
+            <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(wettelijk overheidsdoel)</div>
+        </div>
+        <div style="flex:1; border:2px solid #4A9A2C; border-radius:12px; padding:20px 24px;">
+            <div style="font-size:2.4rem; font-weight:700; color:#4A9A2C; line-height:1.1;">100%</div>
+            <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">circulair inkopen in 2050</div>
+            <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(huidige overheidsambitie)</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+
+    In 2021 spendeerde de Rijksoverheid ruim **85 miljard euro** aan ingekochte diensten, producten en werken.
+    In 2023 was de inkoop van *Werkplekomgeving (Rijksoverheid)* jaarlijks goed voor zo'n **60 miljoen euro**.
+
     Het gestelde doel is dat per 2030 al voor **50% minder primaire grondstoffen** ingekocht worden, en om dit te laten toenemen tot **100% circulair in 2050**.
-    Tevens is ook de ambitie uitgesproken om vanaf **2030 enkel nog gebruik te maken van circulair meubilair**.  
-
-    *(Bron: [Rijksoverheid](https://www.denkdoeduurzaam.nl/actueel/nieuws/2023/11/13/duurzame-revolutie-op-de-werkplek-focus-op-circulair-meubilair-en-consuminderen))*
-
+    Tevens is ook de ambitie uitgesproken om vanaf **2030 enkel nog gebruik te maken van circulair meubilair**.
+    """)
+    st.caption("Bron: [Rijksoverheid](https://www.denkdoeduurzaam.nl/actueel/nieuws/2023/11/13/duurzame-revolutie-op-de-werkplek-focus-op-circulair-meubilair-en-consuminderen)")
+    st.markdown("""
     ---
 
     ### MVOI – Wat is het?
 
-    “Nederland staat voor belangrijke maatschappelijke uitdagingen, zoals het aanpakken van klimaatverandering en het overstappen naar een circulaire economie.  
+    Maatschappelijk Verantwoord Opdrachtgeven en Inkopen is de inkoopstandaard voor overheidsklanten. De overheid koopt daarmee niet alleen op prijs. Via MVOI weegt zij bij aanbestedingen ook milieu- en sociale effecten mee.
+    Dit geldt voor centrale én decentrale overheden, inclusief overheidsinstellingen. Circulair inkopen is één van de volgende zes verplichte thema's:
+    """)
 
-    Maatschappelijk verantwoord opdrachtgeven en inkopen (MVOI) is een manier waarop de overheid kan helpen bij het aanpakken van deze uitdagingen door zorgvuldig te kiezen wat ze koopt.
-    Centrale en decentrale overheden, inclusief overheidsinstellingen, kopen jaarlijks gezamenlijk voor circa **85 miljard euro (2021)** aan diensten, producten en werken in. Hiermee heeft de overheid een groot effect op de samenleving.
-    MVOI houdt in dat aanbestedende diensten niet alleen rekening houden met de prijs van hun inkopen, maar ook met de milieu- en sociale effecten. Deze effecten zijn ondergebracht in zes thema’s:
+    st.markdown('''
+<style>
+.mvoi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 24px;margin-bottom:16px;}
+.mvoi-item{display:flex;align-items:center;gap:8px;font-size:0.9rem;}
+.mvoi-dot{width:18px;height:18px;border-radius:3px;flex-shrink:0;}
+.mvoi-g .mvoi-dot{background-color:#e8f5e9;}
+.mvoi-b .mvoi-dot{background-color:#e3f2fd;}
+.mvoi-o .mvoi-dot{background-color:#fff3e0;}
+.mvoi-p .mvoi-dot{background-color:#f3e5f5;}
+.mvoi-r .mvoi-dot{background-color:#fce4ec;}
+.mvoi-lg .mvoi-dot{background-color:#f1f8e9;}
+.mvoi-item span{color:#31333f;}
+</style>
+<div class="mvoi-grid">
+  <div class="mvoi-item mvoi-g"><div class="mvoi-dot"></div><span>Milieu &amp; Biodiversiteit</span></div>
+  <div class="mvoi-item mvoi-b"><div class="mvoi-dot"></div><span>Circulair (incl. inkoop)</span></div>
+  <div class="mvoi-item mvoi-o"><div class="mvoi-dot"></div><span>Klimaat</span></div>
+  <div class="mvoi-item mvoi-p"><div class="mvoi-dot"></div><span>IMVO (Ketenaansprakelijkheid)</span></div>
+  <div class="mvoi-item mvoi-r"><div class="mvoi-dot"></div><span>Diversiteit &amp; Inclusie</span></div>
+  <div class="mvoi-item mvoi-lg"><div class="mvoi-dot"></div><span>Sociaal Return</span></div>
+</div>
+''', unsafe_allow_html=True)
 
-    - Milieu en Biodiversiteit  
-    - Klimaat  
-    - Circulair (inclusief biobased)  
-    - Ketenverantwoordelijkheid (Internationale Sociale Voorwaarden)  
-    - Diversiteit & Inclusie  
-    - Social Return.”
+    st.caption('Bron: [RIVM – Trends in MVOI](https://www.rivm.nl/maatschappelijk-verantwoord-opdrachtgeven-en-inkopen/trends-in-mvoi)')
 
-    *(Bron: [RIVM, 2025](https://www.rivm.nl/maatschappelijk-verantwoord-opdrachtgeven-en-inkopen/wat-is-mvoi))*
-
-    ### Inzet per MVOI-thema            
+    st.markdown("""
+    ### Inzet per MVOI-thema
     """)
 
     df_mvoi = pd.DataFrame({'jaar' : ['2015-2016', '2017-2018', '2019-2020', '2021-2022'],
@@ -163,6 +203,8 @@ if ss.klanttype_value == 'Overheid':
 
     st.markdown("### Ambitieniveau bij uitvraag MVOI")
 
+    st.write('In 2021-2022 besteedde 79% van aanbestedingen aandacht aan MVOI. Het aandeel "Significant" (hoogste lat) groeit ten koste van "Basis" en "Niet toegepast".')
+
     df_mvi_ambitie = pd.DataFrame({
         "Jaar": ["2015-2016", "2017-2018", "2019-2020", "2021-2022"],
         "Geen MVI toegepast": [0.22, 0.13, 0.13, 0.22],
@@ -211,13 +253,7 @@ if ss.klanttype_value == 'Overheid':
     cols2 = st.columns(2)
     with cols2[0]:
         st.plotly_chart(fig3)
-
-    st.markdown("""
-    In 2021-2022 besteedde 79% van de aanbestedingen aandacht aan MVOI (Maatschappelijk Verantwoord Opdrachtgeven en Inkopen). Bijvoorbeeld door bij de aanbestedingen geschiktheidseisen, selectiecriteria, minimumeisen en contractbepalingen te gebruiken op het gebied van duurzaamheid. [RIVM, 2024](https://www.rivm.nl/maatschappelijk-verantwoord-opdrachtgeven-en-inkopen/trends-in-mvoi)
-
-    *Het ambitieniveau "basis" is bedoeld om niet-duurzame producten, diensten en werken uit te sluiten. De criteria voor "significant" en "ambitieus" gaan een stap verder. Die hebben als doel het aanmoedigen van duurzame producten en het stimuleren van innovatieve oplossingen. De criteria voor elk ambitieniveau staan op [mvicriteriatool](https://www.mvicriteria.nl/nl) per productgroep aangegeven. Deze inkoopcriteria worden regelmatig aangescherpt. Voor de periode 2015-2016 is enkel onderscheid gemaakt tussen wel of geen gebruik van MVOI (Maatschappelijk Verantwoord Opdrachtgeven en Inkopen). Onderscheid in ambitieniveaus bestond toen nog niet.*            
-
-    """)
+    st.caption("Bron: [RIVM - Trends in MVOI](https://www.rivm.nl/maatschappelijk-verantwoord-opdrachtgeven-en-inkopen/trends-in-mvoi)")
 
     st.markdown("""
     ### MVOI-criteria kantoormeubilair per ambitieniveau
@@ -271,8 +307,6 @@ if ss.klanttype_value == 'Overheid':
         return df
 
     # --- UI ---------------------------------------------------
-    st.header("Ambitieniveau MVOI")
-
     levels = list(data.keys())
     selected_level = st.selectbox("Selecteer een ambitieniveau", levels, key="ambitieniveau")
 
@@ -282,28 +316,59 @@ if ss.klanttype_value == 'Overheid':
     st.caption(f"Huidige MVOI eisen meubilair: {len(df_show)} criteria")
     st.dataframe(df_show, width='stretch', hide_index=True)
 
-    st.markdown("""
-    Bezoek voor verdere details de [MVI-criteriatool website](https://www.mvicriteria.nl/nl/webtool#//23/2//nl)
-                
-    *(Bron: [Kantoormeubels](https://www.mvicriteria.nl/nl/webtool#//23/2//nl))*
-    """)
-
-    with st.container(border = True):
-        st.subheader('5. Voorbeelden uit de praktijk')
-        st.markdown('''
-        | Bedrijfsnaam| Korte beschrijving | 
-        | ----------- | ------------| 
-        | [Gispen](https://www.gispen.com/nl/circulair-inrichten/nieuw-circulair-meubilair/) | Ontwikkelt circulair meubilair volgens strenge duurzame ontwerpcriteria, met hergebruikte en recyclebare materialen en een focus op maximale levensduur en reparatie. | 
-        | [OPNIEUW!](https://www.opnieuw.nl/) | Biedt volledig circulaire inrichting met een focus op hergebruik en refurbishing van bestaand meubilair, met meetbare circulaire impact |
-        | [Ahrend](https://www.ahrend.com/nl/diensten/furniture-as-a-service/) | Furniture-as-a-service |
-        | [Lande Family](https://www.landefamily.nl/duurzaamheid) | Circulair design, nemen producten terug om ze te repareren, opnieuw te stofferen of in onderdelen te hergebruiken en hebben de ambitie om afvalvrij te produceren | 
-        | [Label vandenBerg](https://label.nl/wp-content/uploads/2022/07/LABEL-Vandenberg_NL_Onderhoudsboekje_Online.pdf) | Focust op het (opnieuw) bekleden, repareren en hergebruiken van meubels. Gebruik van lokale materialen en minimaliseren van transport. |
-                    
-        ''')
+    st.markdown('Bezoek voor verdere details de [MVI-criteriatool website](https://www.mvicriteria.nl/nl/webtool#//23/2//nl)')
+    st.caption('Bron: [MVI-criteriatool – Kantoormeubels](https://www.mvicriteria.nl/nl/webtool#//23/2//nl)')
 
 else:
-    st.title("Klantvraag — B2C & B2B")
-            
+    st.title(f"Klantvraag — {ss.klanttype_value}")
+
+    if ss.klanttype_value == 'B2C':
+        st.markdown("""
+        <div style="display:flex; gap:16px; margin-bottom:24px;">
+            <div style="flex:1; border:2px solid #4472C4; border-radius:12px; padding:20px 24px;">
+                <div style="font-size:2.4rem; font-weight:700; color:#4472C4; line-height:1.1;">50%</div>
+                <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">vindt duurzaamheid belangrijk bij meubels</div>
+                <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(CBM &amp; Q&amp;A Retail, 2025)</div>
+            </div>
+            <div style="flex:1; border:2px solid #E8A020; border-radius:12px; padding:20px 24px;">
+                <div style="font-size:2.4rem; font-weight:700; color:#E8A020; line-height:1.1;">40&ndash;50%</div>
+                <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">van duurzame vraag blijft onvervuld</div>
+                <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(Milieu Centraal en D&amp;B, 2023)</div>
+            </div>
+            <div style="flex:1; border:2px solid #E37222; border-radius:12px; padding:20px 24px;">
+                <div style="font-size:2.4rem; font-weight:700; color:#E37222; line-height:1.1;">50%</div>
+                <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">de meerprijs die &gt;50% van klanten wil betalen</div>
+                <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(CBM &amp; Q&amp;A Retail, 2025)</div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    elif ss.klanttype_value == 'B2B':
+        st.markdown("""
+        <div style="display:flex; gap:16px; margin-bottom:24px;">
+            <div style="flex:1; border:2px solid #4472C4; border-radius:12px; padding:20px 24px;">
+                <div style="font-size:2.4rem; font-weight:700; color:#4472C4; line-height:1.1;">64%</div>
+                <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">van bedrijven vindt duurzame inkoop relevant</div>
+                <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(JARO &amp; CBSIBS, 2023)</div>
+            </div>
+            <div style="flex:1; border:2px solid #E8A020; border-radius:12px; padding:20px 24px;">
+                <div style="font-size:2.4rem; font-weight:700; color:#E8A020; line-height:1.1;">&gt;50%</div>
+                <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">heeft duurzaamheid in inkoopbeleid verankerd</div>
+                <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(JARO, 2023)</div>
+            </div>
+            <div style="flex:1; border:2px solid #E37222; border-radius:12px; padding:20px 24px;">
+                <div style="font-size:2.4rem; font-weight:700; color:#E37222; line-height:1.1;">4/10</div>
+                <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">bedrijven past het toe in inkoopstrategieën (+7% t.o.v. 2020)</div>
+                <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(JARO, 2023)</div>
+            </div>
+            <div style="flex:1; border:2px solid #4A9A2C; border-radius:12px; padding:20px 24px;">
+                <div style="font-size:2.4rem; font-weight:700; color:#4A9A2C; line-height:1.1;">20%</div>
+                <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">van de Europese meubelmarkt is in 2030 duurzaam</div>
+                <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(Grand View Research, 2026)</div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
     c1, c2 = st.columns(2)
 
     with c1:
@@ -402,11 +467,9 @@ else:
 
             st.plotly_chart(fig)
             if ss.klanttype_value == 'B2C':
-                st.markdown('*(Bron: [CBM en Q&A Retail, 2025](https://cbm.nl/publicatie/129-level-playingfield-nodig-voor-toekomst-meubelindustrie))*')
+                st.caption('Bron: [CBM en Q&A Retail, 2025](https://cbm.nl/publicatie/129-level-playingfield-nodig-voor-toekomst-meubelindustrie)')
             else:
-                st.markdown("""
-[Bron](https://unite.eu/nl-nl/media/pers/studie-duurzame-b2b-inkoop)                            
-                            """)
+                st.caption('Bron: [Unite.eu – Studie duurzame B2B-inkoop](https://unite.eu/nl-nl/media/pers/studie-duurzame-b2b-inkoop)')
                             
         if ss.klanttype_value == 'B2C':
             with st.expander('**3.2 Klantwens vs afzet**'):
@@ -468,7 +531,7 @@ else:
                 )
                 st.plotly_chart(fig)
 
-                st.markdown('*(Bron: [Milieu Centraal, Rijkswaterstaat, 2023](https://www.milieucentraal.nl/media/b01enjyy/factsheet-consumenteninzichten-zitmeubilair.pdf))*')
+                st.caption('Bron: [Milieu Centraal & Rijkswaterstaat, 2023](https://www.milieucentraal.nl/media/b01enjyy/factsheet-consumenteninzichten-zitmeubilair.pdf)')
         else:
             with st.expander('**3.2 Klantwens vs afzet**'):
                 p1, p2 = st.columns(2)
@@ -477,7 +540,7 @@ else:
                 p1.write("Of beleid en strategieën daadwerkelijk worden toegepast in de dagelijkse activiteiten van het bedrijf, hangt echter af van inkoopbeslissingen. In dit opzicht blijven de daadwerkelijke effecten van beleid en strategieën nog achter, aangezien zaken als levenscycluskostenanalyse, risicobeoordeling en de duurzaamheidsprestaties van leveranciers nog niet bovenaan de lijst staan als het gaat om besluitvormingscriteria (zie visual).")
                 
                 p2.image('assets/B2B_3_2.png')
-                p1.markdown('[bron](https://unite.eu/assets/2023_jaro_whitepaperstudie2023_en.pdf)')
+                p1.caption('Bron: [JARO, 2023](https://unite.eu/assets/2023_jaro_whitepaperstudie2023_en.pdf)')
         if ss.klanttype_value == 'B2C':
             with st.expander('**3.3 Voorkeur voor lokale productie**'):
 
@@ -532,8 +595,8 @@ else:
                 )
 
                 st.plotly_chart(fig)
-                st.markdown('*(Bron: [CBM en Q&A Retail, 2025](https://cbm.nl/publicatie/129-level-playingfield-nodig-voor-toekomst-meubelindustrie))*')
-                
+                st.caption('Bron: [CBM en Q&A Retail, 2025](https://cbm.nl/publicatie/129-level-playingfield-nodig-voor-toekomst-meubelindustrie)')
+
     with st.container(border = True):
         with st.expander('**4. Prijsperceptie en -acceptatie**'):
             st.write('Meer dan de helft van de consumenten is bereid 10–20% meer te betalen. Dit biedt concrete ruimte voor premiumpositionering en hogere marges, mits duurzaamheid aantoonbaar is.')
@@ -586,7 +649,7 @@ else:
 
             st.plotly_chart(fig)
 
-            st.markdown('*(Enquête Duitse markt, bron: [PwC, 2024](https://www.pwc.com/gx/en/issues/c-suite-insights/voice-of-the-consumer-survey/2024.html))*')
+            st.caption('Bron: [PwC, 2024](https://www.pwc.com/gx/en/issues/c-suite-insights/voice-of-the-consumer-survey/2024.html)')
             
     with st.container(border = True):
         st.subheader('5. Voorbeelden uit de praktijk')
@@ -642,15 +705,7 @@ else:
             "https://www.triboo.eu"]
         ]
 
-        columns = [
-            "Bedrijfsnaam",
-            "Circulaire producten/diensten",
-            "Korte beschrijving",
-            "Primaire filters (marktsegment)",
-            "Branche",
-            "Link"
-        ]
-
-        df = pd.DataFrame(data, columns=columns)
-
-        st.table(df)
+        header = "| Bedrijfsnaam | Product / dienst | Beschrijving | Marktsegment |"
+        sep    = "| --- | --- | --- | --- |"
+        rows   = [f"| [{d[0]}]({d[5]}) | {d[1]} | {d[2]} | {d[3]} |" for d in data]
+        st.markdown('\n'.join([header, sep] + rows))
