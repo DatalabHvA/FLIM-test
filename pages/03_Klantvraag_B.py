@@ -61,12 +61,12 @@ if ss.klanttype_value == 'Overheid':
         <div style="flex:1; border:2px solid #E37222; border-radius:12px; padding:20px 24px;">
             <div style="font-size:2.4rem; font-weight:700; color:#E37222; line-height:1.1;">50%</div>
             <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">minder inkoop van primaire grondstoffen in 2030</div>
-            <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(wettelijk overheidsdoel)</div>
+            <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(doelstelling Rijksoverheid)</div>
         </div>
         <div style="flex:1; border:2px solid #4A9A2C; border-radius:12px; padding:20px 24px;">
             <div style="font-size:2.4rem; font-weight:700; color:#4A9A2C; line-height:1.1;">100%</div>
             <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">circulair inkopen in 2050</div>
-            <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(huidige overheidsambitie)</div>
+            <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(doelstelling Rijksoverheid)</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -336,7 +336,7 @@ else:
                 <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(Milieu Centraal en D&amp;B, 2023)</div>
             </div>
             <div style="flex:1; border:2px solid #E37222; border-radius:12px; padding:20px 24px;">
-                <div style="font-size:2.4rem; font-weight:700; color:#E37222; line-height:1.1;">50%</div>
+                <div style="font-size:2.4rem; font-weight:700; color:#E37222; line-height:1.1;">10%</div>
                 <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">de meerprijs die &gt;50% van klanten wil betalen</div>
                 <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(CBM &amp; Q&amp;A Retail, 2025)</div>
             </div>
