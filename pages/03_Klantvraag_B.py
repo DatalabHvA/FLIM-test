@@ -690,12 +690,12 @@ else:
             "Meubel",
             "https://label.nl/wp-content/uploads/2022/07/LABEL-Vandenberg_NL_Onderhoudsboekje_Online.pdf"],
 
-            ["Triboo",
-            "Greengridz – tafels",
-            "Circulaire (werk)tafels opgebouwd uit modulaire componenten, ontworpen voor hergebruik, herconfiguratie en eenvoudige demontage, met een lage milieu-impact.",
+            ["Zwartwoud",
+            "Oogst-, refurbishment- en circulaire meubeldiensten",
+            "Ontwikkelt circulaire interieur- en meubeloplossingen met een focus op hergebruik, hoogwaardige herbestemming en remontabel ontwerp voor maximale waardebehoud.",
             "Kantoren, projectinrichting, overheid",
             "Meubel",
-            "https://www.triboo.eu"],
+            "www.zwartwoud.nl"],
 
             ["Triboo",
             "Greengridz – bezels",
