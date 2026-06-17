@@ -655,27 +655,6 @@ else:
         st.subheader('5. Voorbeelden uit de praktijk')
 
         data = [
-            ["Gispen",
-            "Gispen Circulair (diverse meubellijnen)",
-            "Ontwikkelt circulair meubilair volgens strenge duurzame ontwerpcriteria, met hergebruikte en recyclebare materialen en een focus op maximale levensduur, reparatie en herstoffering.",
-            "Kantoren, overheid, zorg, onderwijs",
-            "Meubel",
-            "https://www.gispen.com/nl/circulair-inrichten/nieuw-circulair-meubilair/"],
-
-            ["OPNIEUW!",
-            "Refurbished & hergebruikte meubelinrichtingen",
-            "Biedt volledig circulaire inrichting met een sterke focus op hergebruik, refurbishing en reconfiguratie van bestaand meubilair, met meetbare circulaire impact (CO₂- en grondstoffenbesparing).",
-            "Kantoren, overheid, onderwijs, corporate",
-            "Meubel",
-            "https://www.opnieuw.nl/"],
-
-            ["Ahrend",
-            "Furniture-as-a-Service (o.a. Ahrend Revived, 2020, Balance)",
-            "Levert circulair kantoormeubilair via een dienstmodel, waarbij producten eigendom blijven van de producent en ontworpen zijn voor hergebruik, refurbishment en recycling.",
-            "Kantoren, overheid, maatschappelijke organisaties",
-            "Meubel",
-            "https://www.ahrend.com/nl/diensten/furniture-as-a-service/"],
-
             ["Lande Family",
             "Circulaire collecties (o.a. Lande, De Vorm, Functionals)",
             "Ontwerpt circulair meubilair en neemt producten terug om te repareren, opnieuw te stofferen of in onderdelen te hergebruiken, met de ambitie om afvalvrij te produceren.",
@@ -696,6 +675,27 @@ else:
             "Kantoren, projectinrichting, overheid",
             "Meubel",
             "www.zwartwoud.nl"],
+
+            ["Gispen",
+            "Gispen Circulair (diverse meubellijnen)",
+            "Ontwikkelt circulair meubilair volgens strenge duurzame ontwerpcriteria, met hergebruikte en recyclebare materialen en een focus op maximale levensduur, reparatie en herstoffering.",
+            "Kantoren, overheid, zorg, onderwijs",
+            "Meubel",
+            "https://www.gispen.com/nl/circulair-inrichten/nieuw-circulair-meubilair/"],
+
+            ["OPNIEUW!",
+            "Refurbished & hergebruikte meubelinrichtingen",
+            "Biedt volledig circulaire inrichting met een sterke focus op hergebruik, refurbishing en reconfiguratie van bestaand meubilair, met meetbare circulaire impact (CO₂- en grondstoffenbesparing).",
+            "Kantoren, overheid, onderwijs, corporate",
+            "Meubel",
+            "https://www.opnieuw.nl/"],
+
+            ["Ahrend",
+            "Furniture-as-a-Service (o.a. Ahrend Revived, 2020, Balance)",
+            "Levert circulair kantoormeubilair via een dienstmodel, waarbij producten eigendom blijven van de producent en ontworpen zijn voor hergebruik, refurbishment en recycling.",
+            "Kantoren, overheid, maatschappelijke organisaties",
+            "Meubel",
+            "https://www.ahrend.com/nl/diensten/furniture-as-a-service/"],
 
             ["Triboo",
             "Greengridz – bezels",
