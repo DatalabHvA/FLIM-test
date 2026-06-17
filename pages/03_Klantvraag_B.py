@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
-import sys
+import sys'
 sys.path.append("..")
 
 from widgets import *
@@ -336,8 +336,8 @@ else:
                 <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(Milieu Centraal en D&amp;B, 2023)</div>
             </div>
             <div style="flex:1; border:2px solid #E37222; border-radius:12px; padding:20px 24px;">
-                <div style="font-size:2.4rem; font-weight:700; color:#E37222; line-height:1.1;">10%</div>
-                <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">de meerprijs die &gt;50% van klanten wil betalen</div>
+                <div style="font-size:2.4rem; font-weight:700; color:#E37222; line-height:1.1;">+10%</div>
+                <div style="margin-top:10px; font-size:0.95rem; line-height:1.5;">de meerprijs die meer dan 50% van de klanten bereid is te betalen</div>
                 <div style="margin-top:10px; font-size:0.8rem; color:#666; font-style:italic;">(CBM &amp; Q&amp;A Retail, 2025)</div>
             </div>
         </div>
